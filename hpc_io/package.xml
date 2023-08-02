@@ -12,6 +12,8 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>hpc_io_description</exec_depend>
+  <exec_depend>tracer_ros2</exec_depend>
+  <exec_depend>ugv_sdk</exec_depend>
   
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
