@@ -1,2 +1,4 @@
-.gv
-.pdf
+#ignoring files
+
+*.gv
+*.pdf
