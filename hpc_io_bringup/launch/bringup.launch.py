@@ -87,13 +87,19 @@ def generate_launch_description():
                     PythonLaunchDescriptionSource(
                 velodyne_pointcloud_dir + '/launch/velodyne_convert_node-VLP16-composed-launch.py')
                 )
+                
+    velodyne_laserscan_dir = get_package_share_directory('velodyne_laserscan')
+    velodyne_laserscan_launch = IncludeLaunchDescription(
+                    PythonLaunchDescriptionSource(
+                velodyne_laserscan_dir + '/launch/velodyne_laserscan_node-composed-launch.py')
+                )           
 
     realsense2_dir = get_package_share_directory('realsense2_camera')
     realsense2_launch = IncludeLaunchDescription(
                     PythonLaunchDescriptionSource(
                 realsense2_dir + '/launch/rs_launch.py')
                 )
-
+                #hy
     return LaunchDescription([
         gui_arg,
         # model_arg,
@@ -104,6 +110,7 @@ def generate_launch_description():
         tracer_base_launch,
         velodyne_driver_launch,
         velodyne_pointcloud_launch,
+        velodyne_laserscan_launch,
         realsense2_launch,
         rviz_node,
     ])
